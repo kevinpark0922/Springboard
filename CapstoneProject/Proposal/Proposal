@@ -1,1 +1,33 @@
 
+Auto spreading Project Proposal
+
+Problem statement: 
+Currently a lot of companies are entering the financial statement into spread manually.
+We would like to automate this process using machine learning.
+
+Data: 
+We have many fake financial statement image files(jpg).
+
+A.	Outline of the project:
+
+1.	Labeling step(data preparation) : First we need to label those image files manually. 
+If the image contains balance sheet: label it as 1
+If the image contains income statement: label it as 2
+If the image contains neither balance sheet nor income statement: label it as 3
+⇒ Supervised learning. 
+
+2.	Classification Model using DNN: 
+After we have enough labeled images, we will train DNN classification model with those images.
+2.1 if DNN model doesn’t give us the satisfying accuracy with the image data, we should use the other feature like the tesseract OCR result data  into DNN classification model. 
+
+3.	Run those balance sheet & income statement images through tesseract OCR and extract financial information out of them.
+
+4.	Populate the financial template statement(balance sheet & income statement) with the data extracted from tesseract ocr
+
+5.	Extra advanced process: table detection model using CNN
+A lot of cases, images contains both financial statement table as well as some regular sentences. Some cases, financial statement table and this regular sentences might have the same financial statement label with the different number. If that happens, we should ignore the value from the regular sentences. In order to do that, we should use the additional table detection model. 
+
+B. Final deliverable
+1.	Final deliverable will be json file that contains financial numbers with the financial labels which will be displayed to Web user interface.
+C. Computational resources
+
